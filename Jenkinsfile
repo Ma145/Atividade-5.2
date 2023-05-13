@@ -4,14 +4,14 @@ pipeline {
     stage("build") {
       steps {
         sh """
-          docker build -t src/main/java/br/unicamp/ic/inf335/olaunicamp .
+          docker build -t olaunicamp .
         """
       }
     }
     stage("run") {
       steps {
         sh """
-          docker run --rm src/main/java/br/unicamp/ic/inf335/olaunicamp
+          docker run --rm olaunicamp
         """
       }
     }
